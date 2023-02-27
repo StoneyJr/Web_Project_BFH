@@ -9,4 +9,4 @@ eingebaut werden, die im Rahmen des Web-projektes sich als machbar heraustellen 
 Beispiel ein Terminkalender, Kontaktformular etc.
 
 ## Referenz als Inspiration:
-(https://www.osana.ch/osteopathische-behandlungsformen "Osana Praxis Website")
+[Osana Praxis Website](https://www.osana.ch/osteopathische-behandlungsformen "Osana Praxis Website")
