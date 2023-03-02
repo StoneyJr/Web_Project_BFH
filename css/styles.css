@@ -1,0 +1,19 @@
+h1 {
+
+    color: midnightblue;
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-style: italic;
+    color: steelblue;
+}
+
+.imp{
+    font-weight: bolder;
+    font-style: italic;
+}
+
