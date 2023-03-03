@@ -1,19 +1,68 @@
+header {
+
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 20px 10px 20px 10px;
+}
+
+header a:hover {
+    color: aqua;
+}
+
+
+body {
+    font-family: Calibri, serif;
+    text-decoration: none;
+
+}
+
 h1 {
 
     color: midnightblue;
-    font-style: oblique;
-    font-weight: bolder;
     text-align: center;
+    font-family: Calibri, serif;
 }
 
-h3{
+h3 {
     text-align: center;
     font-style: italic;
     color: steelblue;
+    font-family: Calibri, serif;
 }
 
-.imp{
+.quote {
     font-weight: bolder;
     font-style: italic;
+    font-family: Calibri, serif;
 }
+
+.pictureAbout {
+
+    width: 60%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 90px;
+}
+
+.logo {
+    width: 30%;
+    padding: 20px 20px 20px 20px;
+
+}
+
+
+
+
+
 
