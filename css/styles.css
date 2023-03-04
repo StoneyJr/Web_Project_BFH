@@ -1,15 +1,15 @@
-header {
+header div{
 
     border: 2px solid blue;
     border-radius: 5px;
     width: 100%;
-    background-color: lightblue;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header a {
+header div a{
     color: black;
     font-size: 20px;
     text-decoration: none;
@@ -18,7 +18,8 @@ header a {
 }
 
 header a:hover {
-    color: aqua;
+    background-color: #ddd;
+    color: black;
 }
 
 
@@ -34,6 +35,14 @@ h1 {
     text-align: center;
     font-family: Calibri, serif;
 }
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    color: steelblue;
+    font-family: Calibri, serif;
+}
+
 
 h3 {
     text-align: center;
@@ -60,7 +69,19 @@ h3 {
     padding: 20px 20px 20px 20px;
 
 }
+.language{
+    display: inline;
+    width: 25px;
+    height: 25px;
+    margin: 0 0.125em;
+    padding: 0;
+    vertical-align: baseline;
+}
+.osteopathy{
+    width: 60%;
+    height: auto;
 
+}
 
 
 
