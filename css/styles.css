@@ -1,9 +1,8 @@
 header div{
 
-    border: 2px solid blue;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 100%;
-    background-color: white;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,11 +50,18 @@ h3 {
     font-family: Calibri, serif;
 }
 
+
+
+
+
+
+
 .quote {
     font-weight: bolder;
     font-style: italic;
     font-family: Calibri, serif;
 }
+
 
 .pictureAbout {
 
@@ -65,18 +71,24 @@ h3 {
 }
 
 .logo {
-    width: 30%;
+    width: 25%;
     padding: 20px 20px 20px 20px;
 
 }
-.language{
+.languageList img{
+
     display: inline;
-    width: 25px;
-    height: 25px;
+    width: 12px;
+    height: 12px;
     margin: 0 0.125em;
     padding: 0;
     vertical-align: baseline;
 }
+
+.languageList {
+    list-style: none;
+}
+
 .osteopathy{
     width: 60%;
     height: auto;
