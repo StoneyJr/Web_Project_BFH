@@ -1,4 +1,5 @@
-header div{
+/*Navigationsbar */
+header div {
 
     border-radius: 15px;
     width: 100%;
@@ -8,7 +9,7 @@ header div{
     align-items: center;
 }
 
-header div a{
+header div a {
     color: black;
     font-size: 20px;
     text-decoration: none;
@@ -21,10 +22,70 @@ header a:hover {
     color: black;
 }
 
+/*Raumaufteilung */
+.flex-container {
+    display: flex;
+    flex-direction: row;
 
+}
+
+.flex-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-container > div {
+    align-items: center;
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    .column {
+        float: none;
+        width: 100%;
+    }
+}
+
+.column {
+    width: 50%;
+}
+
+.flex-container .column1 {
+    width: 33.3%;
+    border-radius: 0;
+    background-color: white;
+    text-align: left;
+}
+
+.flex-container .column2 {
+    width: 33.3%;
+    border-radius: 0;
+    background-color: white;
+}
+
+.flex-container .column3 {
+    width: 33.3%;
+    border-radius: 0;
+    background-color: white;
+    text-align: right;
+
+}
+.flex-container .column4 {
+    width: 50%;
+    border-radius: 0;
+    background-color: #cfd8e5;
+    text-align: justify;
+
+}
+/*Text */
 body {
     font-family: Calibri, serif;
     text-decoration: none;
+    text-align: center;
 
 }
 
@@ -51,31 +112,47 @@ h3 {
 }
 
 
+.headline {
+    text-align: center;
+    background-color: rgba(43, 107, 226, 0.09);
+    border-radius: 15px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100px;
+    padding-top: 20px;
+    margin: 10px auto auto;
 
-
-
-
+}
 
 .quote {
     font-weight: bolder;
+    font-size: 14px;
     font-style: italic;
     font-family: Calibri, serif;
 }
 
+.list {
+    list-style-position: inside;
+}
 
+
+/*Bilder */
 .pictureAbout {
-
     width: 60%;
-    padding: 20px 20px 20px 20px;
-    border-radius: 90px;
+    padding: 0 20px 20px 20px;
+    border-radius: 50px;
 }
 
 .logo {
-    width: 25%;
+    width: 70px;
     padding: 20px 20px 20px 20px;
-
 }
-.languageList img{
+
+.languageList img {
 
     display: inline;
     width: 12px;
@@ -89,9 +166,12 @@ h3 {
     list-style: none;
 }
 
-.osteopathy{
+.osteopathy {
     width: 60%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
