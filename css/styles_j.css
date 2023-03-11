@@ -1,0 +1,122 @@
+/*General layout*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: auto;
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+    font-family: Calibri, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*all block elements are flex containers*/
+header, nav, main, footer {
+    padding: 1em;
+    flex: 100%
+}
+
+/*Header layout*/
+header{
+    background-color: rgba(43, 107, 226, 0.09);
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 30px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    margin: 10px auto auto;
+}
+
+header .title{
+    text-align: center;
+    flex-basis: 50%;
+    align-self: center;
+    color: midnightblue;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+header a{
+    height: 100px;
+    flex: 25%;
+    display: flex;
+    justify-content: left;
+}
+
+header .empty_right{
+    flex: 25%;
+}
+
+/*Nav layout*/
+nav{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-size: cover;
+}
+
+nav a{
+    margin: 10px;
+    padding: 20px 10px 20px 10px;
+}
+
+/*Nav style*/
+nav{
+    background-color: aliceblue;
+}
+
+nav a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    font-weight: bold;
+    transition: color 0.25s ease-out;
+}
+
+/*Main layout*/
+main {
+    display: flex;
+    background-image: url('../pictures/background.jpg');
+    background-size: auto;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Footer layout*/
+footer .row{
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+}
+
+footer .row .footer1 {
+    display: table-cell;
+    width: 33%;
+    text-align: left;
+}
+
+footer .row .footer2 {
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+}
+
+footer .row .footer3 {
+    display: table-cell;
+    width: 33%;
+    text-align: right;
+}
