@@ -1,0 +1,160 @@
+/*General layout*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: auto;
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+header, nav, main, footer {
+    padding: 1em;
+    flex: 100%;
+}
+
+/*Header layout*/
+header{
+    display: flex;
+    height: auto;
+    align-items: center;
+    margin: 10px auto auto;
+}
+
+header .title{
+    flex-basis: 50%;
+    align-self: center;
+}
+
+header a{
+    flex: 25%;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+
+header .empty_right{
+    flex: 25%;
+}
+
+/*Nav layout*/
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+nav a{
+    margin: 10px;
+}
+
+/*Main layout*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 800px;
+}
+
+main .row{
+    display: flex;
+    flex-direction: column;    
+}
+
+main .form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Footer layout*/
+footer .row{
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+footer .row .footer1 {
+    display: table-cell;
+    width: 33%;
+    text-align: left;
+}
+
+footer .row .footer2 {
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+}
+
+footer .row .footer3 {
+    display: table-cell;
+    width: 33%;
+    text-align: right;
+}
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+
+    main .row{
+        flex-direction: row;
+    }
+
+    main .column{
+        flex: 50%;
+    }
+
+    main .mainHeader{
+        position: 1;
+    }
+
+    main .form{
+        flex-direction: row;
+    }
+
+    main .form .shortInput{
+        flex: 30%;
+    }
+
+    main .form .middleInput, main .form .longInput{
+        flex: 100%;
+    }
+
+}
+
+/* Desktop layout */
+@media screen and (min-width: 850px) {
+
+    main{
+        flex-direction: row;
+    }
+
+    main .mainHeader{
+        order: 1;
+        flex: 100%;
+    }
+
+    main .row{
+        order: 1;
+        flex: 75%;
+    }
+
+    main .sideBar{
+        order: 2;
+        flex: 25%;
+    }
+
+    main .form{
+        order: 3;
+        flex: 100%;
+    }
+}

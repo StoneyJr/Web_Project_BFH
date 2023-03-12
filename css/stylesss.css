@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Calibri, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+header, nav, aside, footer {
+    padding: 1em;
+    flex: 100%;
+}
+
+/*Title der Seite */
+header {
+    text-align: center;
+    background-color: rgba(43, 107, 226, 0.09);
+    border-radius: 15px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100px;
+    padding-top: 20px;
+    margin: 10px auto auto;
+}
+
+/*Navigationsbar */
+nav {
+    border-radius: 15px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 20px 10px 20px 10px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*Body */
+article {
+    display: flex;
+}
+
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+article > div {
+    align-items: center;
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+.column {
+    width: 50%;
+}
+
+
+article .column4 {
+    width: 50%;
+    border-radius: 0;
+    background-color: #cfd8e5;
+    text-align: justify;
+
+}
+
+
+.row{
+    width: 98%;
+    margin: 10px;
+    display: table;
+    text-align: center;
+    background-color: white;
+}
+
+/*Footer*/
+.row .footer1 {
+    display: table-cell;
+    width: 33%;
+    text-align: left;
+}
+
+.row .footer2 {
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+}
+
+.row .footer3 {
+    display: table-cell;
+    width: 33%;
+    text-align: right;
+}
+
+
+header { order: 1; }
+nav { order: 2; }
+article { order: 3; }
+footer { order: 4; }
+
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+    nav {
+        order: 1;
+        flex: 25%;
+    }
+
+    article {
+        order: 2;
+        flex: 75%;
+    }
+
+
+    article img {
+        width: 80%;
+    }
+}
+
+/* Desktop layout */
+@media screen and (min-width: 850px) {
+    nav {
+        order: 2;
+        flex: 20%;
+    }
+
+    article {
+        order: 3;
+        flex: 60%;
+    }
+
+
+    article img {
+        width: 60%;
+    }
+
+}
+
+
+/*Text */
+
+h1 {
+    color: midnightblue;
+}
+
+h2 {
+    font-style: italic;
+    color: steelblue;
+  }
+
+
+h3 {
+    font-style: italic;
+    color: steelblue;
+}
+
+.quote {
+    font-weight: bolder;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.list {
+    list-style-position: inside;
+}
+
+
+/*Bilder */
+.pictureAbout {
+    width: 60%;
+    padding: 0 20px 20px 20px;
+    border-radius: 50px;
+}
+
+.logo {
+    width: 70px;
+    padding: 20px 20px 20px 20px;
+}
+
+.languageList img {
+    display: inline;
+    width: 12px;
+    height: 12px;
+    margin: 0 0.125em;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.languageList {
+    list-style: none;
+}
+
+.osteopathy {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+
