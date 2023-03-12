@@ -84,8 +84,18 @@ nav a:hover{
 /*Main layout*/
 main {
     display: flex;
+    flex-wrap: wrap;
     background-image: url('../pictures/background.jpg');
     background-size: auto;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 800px;
+}
+
+main .row{
+    display: flex;
+    flex-direction: column;    
 }
 
 main::after {
@@ -93,6 +103,29 @@ main::after {
     display: table;
     clear: both;
 }
+
+/*Main style*/
+main .sideBar{
+    background-color: rgba(14, 24, 167, 0.7); 
+    padding: 10px;
+}
+main .column{
+    background-color: rgba(43, 107, 226, 0.09);
+    padding: 15px;
+  }
+
+main .sideBar p, main .sideBar h2{
+    color: aliceblue;
+}
+
+main .sideBar .button{
+    color: aliceblue;
+}
+
+main .sideBar .button:hover{
+   background-color: rgba(12, 19, 129, 0.7);
+}
+
 
 /*Footer layout*/
 footer .row{
@@ -119,4 +152,50 @@ footer .row .footer3 {
     display: table-cell;
     width: 33%;
     text-align: right;
+}
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+    
+
+    main .row{
+        flex-direction: row;
+    }
+}
+
+/* Desktop layout */
+@media screen and (min-width: 850px) {
+
+    main{
+        flex-direction: row;
+    }
+
+    main .mainHeader{
+        order: 1;
+        flex: 100%;
+    }
+
+    main .row{
+        order: 1;
+        flex: 75%;
+    }
+
+    main .sideBar{
+        order: 2;
+        flex: 25%;
+    }
+}
+
+/*general styles*/
+.button{
+    background-color: transparent;
+    padding: 7px 15px;
+    transition: 0.7s;
+    border-width: 1px;
+}
+
+.button:hover{
+    background-color: white;
+    cursor: pointer;
+    border-color: transparent;
 }
