@@ -26,7 +26,7 @@ header{
     border-radius: 15px;
     font-size: 30px;
     display: flex;
-    height: 100px;
+    height: auto;
     align-items: center;
     margin: 10px auto auto;
 }
@@ -41,10 +41,12 @@ header .title{
 }
 
 header a{
-    height: 100px;
+    height: 90px;
     flex: 25%;
     display: flex;
     justify-content: left;
+    align-items: end;
+    padding: 8px;
 }
 
 header .empty_right{
@@ -98,6 +100,12 @@ main .row{
     flex-direction: column;    
 }
 
+main .form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 main::after {
     content: "";
     display: table;
@@ -126,6 +134,15 @@ main .sideBar .button:hover{
    background-color: rgba(12, 19, 129, 0.7);
 }
 
+main .form{
+    background: white;
+    padding: 20px;
+}
+
+main input{
+    vertical-align: top;
+    text-align: left;
+}
 
 /*Footer layout*/
 footer .row{
@@ -156,11 +173,27 @@ footer .row .footer3 {
 
 /* Tablet layout */
 @media screen and (min-width: 600px) {
-    
 
     main .row{
         flex-direction: row;
     }
+
+    main .mainHeader{
+        position: 1;
+    }
+
+    main .form{
+        flex-direction: row;
+    }
+
+    main .form .shortInput{
+        flex: 33px;
+    }
+
+    main .form .middleInput, main .form .longInput{
+        flex: 100%;
+    }
+
 }
 
 /* Desktop layout */
@@ -184,6 +217,11 @@ footer .row .footer3 {
         order: 2;
         flex: 25%;
     }
+
+    main .form{
+        order: 3;
+        flex: 100%;
+    }
 }
 
 /*general styles*/
@@ -192,10 +230,87 @@ footer .row .footer3 {
     padding: 7px 15px;
     transition: 0.7s;
     border-width: 1px;
+    max-width: 120px;
 }
 
 .button:hover{
     background-color: white;
     cursor: pointer;
     border-color: transparent;
+}
+
+input, select, textarea{
+    margin: 6px 8px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 11px 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.longInput{
+    min-height: 250px;
+    font-size: 14px;
+}
+
+.select-items{
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+h1 {
+    color: midnightblue;
+}
+
+h2 {
+    font-style: italic;
+    color: steelblue;
+  }
+
+h3 {
+    font-style: italic;
+    color: steelblue;
+}
+
+.quote {
+    font-weight: bolder;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.list {
+    list-style-position: inside;
+}
+
+/*Bilder */
+.pictureAbout {
+    width: 60%;
+    padding: 0 20px 20px 20px;
+    border-radius: 50px;
+}
+
+.languageList img {
+    display: inline;
+    width: 12px;
+    height: 12px;
+    margin: 0 0.125em;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.languageList {
+    list-style: none;
+}
+
+.osteopathy {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
