@@ -146,12 +146,14 @@ main .sideBar .button:hover{
 
     background: rgba(43, 107, 226, 0.04);
     background-image: url('../pictures/backgroundAbout.png');
+    background-size: cover;
     color: rgba(10, 22, 44, 0.79);
 }
 
 #pictureMonika{
     background-color: rgba(174, 174, 236, 0.35);
-    background-color: #cfd8e5;
+    background: rgba(43, 107, 226, 0.04);
+
 
 }
 
