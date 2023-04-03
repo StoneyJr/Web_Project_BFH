@@ -8,11 +8,7 @@ import org.apache.commons.io.IOUtils;
 import org.example.model.Product;
 import org.example.util.Helper;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigDecimal;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
