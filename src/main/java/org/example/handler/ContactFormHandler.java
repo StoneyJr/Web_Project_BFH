@@ -1,12 +1,12 @@
-package httpserver.handler;
-
-import java.io.IOException;
-import java.util.Map;
+package main.java.org.example.handler;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import org.example.util.Helper;
 
-import httpserver.util.Helper;
+
+import java.io.IOException;
+import java.util.Map;
 
 public class ContactFormHandler implements HttpHandler{
 

@@ -70,6 +70,14 @@ main .form{
     flex-direction: column;
 }
 
+main .products, costs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
+
 main::after {
     content: "";
     display: table;

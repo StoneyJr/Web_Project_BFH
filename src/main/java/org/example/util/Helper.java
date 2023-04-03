@@ -1,4 +1,4 @@
-package httpserver.util;
+package main.java.org.example.util;
 
 import com.sun.net.httpserver.HttpExchange;
 
