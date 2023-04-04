@@ -4,10 +4,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.web.model.Product;
 import org.web.util.Helper;
 
+
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -26,12 +29,17 @@ public class ProductsHandler implements HttpHandler {
 
         doc.append("<ul>");
         for (Product product : getProductsFromDB(filter)) {
-
             doc.append("<li>").append(product.getProductName()).append("</li>");
             doc.append(product.getDescription());
+            doc.append("\n");
+            doc.append("<img src=\"" + product.getImage() + "\" />");
+            doc.append("</ul>\n");
+
+
+
 
         }
-        doc.append("</ul>\n");
+
 
         exchange.setAttribute("products", doc);
         Helper.renderTemplate("treatments.html", exchange);
@@ -48,6 +56,7 @@ public class ProductsHandler implements HttpHandler {
         ObjectMapper mapper = new ObjectMapper();
         List<Product> myObjects = new ArrayList<>();
         try {
+
             myObjects = mapper.readValue(jsonInput, new TypeReference<>() {
             });
         } catch (

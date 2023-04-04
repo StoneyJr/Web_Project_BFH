@@ -6,7 +6,7 @@ h1 {
 h2 {
     font-style: italic;
     color: rgb(30, 56, 77);
-  }
+}
 
 h3 {
     font-style: italic;
@@ -28,78 +28,78 @@ h3 {
 }
 
 /*Body*/
-body{
+body {
     font-family: Calibri, serif;
     text-decoration: none;
-    text-align: center; 
+    text-align: center;
 }
 
 /*Header*/
-header{
+header {
     background-color: rgba(43, 107, 226, 0.09);
     padding: 30px;
     border-radius: 15px;
     font-size: 30px;
 }
 
-header .title{
+header .title {
     font-size: 60px;
     font-weight: bold;
     color: midnightblue;
     text-align: center;
 }
 
-header a{
+header a {
     padding: 8px;
     height: 90px;
 }
 
 /*Nav*/
-nav{
+nav {
     border-radius: 15px;
     background-size: cover;
     background-color: aliceblue;
 }
 
-nav a{
+nav a {
     color: black;
     font-size: 20px;
     text-decoration: none;
     padding: 20px 10px 20px 10px;
 }
 
-nav a:hover{
+nav a:hover {
     font-weight: bold;
     transition: color 0.25s ease-out;
 }
 
 /*Main*/
-main{
-    background-image: linear-gradient(rgba(0, 247, 255, 0.6), 10%, rgba(27, 114, 226, 0.7) ), url('../pictures/background.jpg') ;
-    background-size:cover;
-    
+main {
+    background-image: linear-gradient(rgba(0, 247, 255, 0.6), 10%, rgba(27, 114, 226, 0.7)), url('../pictures/background.jpg');
+    background-size: cover;
+
     border-radius: 15px;
 }
 
-main .column{
+main .column {
     background-color: rgba(181, 221, 233, 0.432);
     padding: 15px;
     border-radius: 10px;
-  }
+}
 
-main a{
+main a {
     color: black;
     font-size: 15px;
     text-decoration: none;
     padding: 20px 10px 20px 10px;
 }
 
-main a:hover{
+main a:hover {
     font-weight: bold;
     transition: color 0.25s ease-out;
 }
 
-.button{
+.button {
     background-color: transparent;
     padding: 7px 15px;
     transition: 0.7s;
@@ -107,26 +107,29 @@ main a:hover{
     max-width: 120px;
 }
 
-.button:hover{
+.button:hover {
     background-color: white;
     cursor: pointer;
     border-color: transparent;
 }
 
-main .form{
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-main .products, costs{
+main .form {
     background: white;
     padding: 20px;
     border-radius: 15px;
 }
 
 
-input, select, textarea{
+main .products img {
+    display: block;
+    text-align: center;
+    height: auto;
+    width: 50%;
+    border-radius: 15px;
+}
+
+
+input, select, textarea {
     margin: 6px 8px;
     border-style: solid;
     border-color: black;
@@ -136,32 +139,32 @@ input, select, textarea{
     font-weight: bold;
 }
 
-.longInput{
+.longInput {
     min-height: 250px;
     font-size: 14px;
 }
 
-main .sideBar{
-    background-color: rgba(14, 24, 167, 0.7); 
+main .sideBar {
+    background-color: rgba(14, 24, 167, 0.7);
     padding: 10px;
     border-radius: 10px;
 }
 
-main .sideBar p, main .sideBar h2{
+main .sideBar p, main .sideBar h2 {
     color: aliceblue;
 }
 
-main .sideBar .button{
+main .sideBar .button {
     color: aliceblue;
 }
 
-main .sideBar .button:hover{
-   background-color: rgba(12, 19, 129, 0.7);
+main .sideBar .button:hover {
+    background-color: rgba(12, 19, 129, 0.7);
 }
 
 /*Extra für über mich*/
 
-#about{
+#about {
 
     background: rgba(43, 107, 226, 0.04);
     background-image: url('../pictures/backgroundAbout.png');
@@ -169,7 +172,7 @@ main .sideBar .button:hover{
     color: rgba(10, 22, 44, 0.79);
 }
 
-#pictureMonika{
+#pictureMonika {
     background-color: rgba(174, 174, 236, 0.35);
     background: rgba(43, 107, 226, 0.04);
 
