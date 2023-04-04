@@ -1,12 +1,12 @@
-package org.example.handler;
+package org.web.handler;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.apache.commons.io.IOUtils;
-import org.example.model.Product;
-import org.example.util.Helper;
+import org.web.model.Product;
+import org.web.util.Helper;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

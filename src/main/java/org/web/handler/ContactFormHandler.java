@@ -1,12 +1,12 @@
-package org.example.handler;
+package org.web.handler;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import org.example.util.Helper;
-
 
 import java.io.IOException;
 import java.util.Map;
+
+import org.web.util.Helper;
 
 public class ContactFormHandler implements HttpHandler{
 

@@ -1,11 +1,12 @@
-package org.example;
+package org.web;
 
 import com.sun.net.httpserver.HttpServer;
-import org.example.handler.ContactFormHandler;
-import org.example.handler.ProductsHandler;
-import org.example.handler.StaticContentHandler;
 
 import java.net.InetSocketAddress;
+
+import org.web.handler.ContactFormHandler;
+import org.web.handler.ProductsHandler;
+import org.web.handler.StaticContentHandler;
 
 public class Main {
 
