@@ -87,6 +87,18 @@ main .column{
     border-radius: 10px;
   }
 
+main a{
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 20px 10px 20px 10px;
+}
+
+main a:hover{
+    font-weight: bold;
+    transition: color 0.25s ease-out;
+}
+
 .button{
     background-color: transparent;
     padding: 7px 15px;
