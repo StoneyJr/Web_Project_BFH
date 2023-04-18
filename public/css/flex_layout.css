@@ -64,6 +64,10 @@ main .row{
     flex-direction: column;    
 }
 
+main .column{
+    flex: 1;
+}
+
 main .form{
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +122,8 @@ footer .row .footer3 {
     }
 
     main .column{
-        flex: 50%;
+        flex: 40%;
+        transition: flex 0.5s;
     }
 
     main .mainHeader{

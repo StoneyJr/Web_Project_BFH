@@ -85,6 +85,21 @@
                 Datenschutz
             </div>
         </div>
-    </footer> 
+    </footer>
+    <script>
+        let columns = document.querySelectorAll('.column')
+        columns.forEach((item) => {
+            item.addEventListener('mouseenter', () => {
+                item.style.flex = '50%'
+                const paragraph = item.querySelector('p');
+                paragraph.style.fontSize = '20px';
+            })
+            item.addEventListener('mouseleave', () => {
+                item.style.flex = '40%'
+                const paragraph = item.querySelector('p');
+                paragraph.style.fontSize = '15px';
+            })
+        })
+    </script>
 </body>
 </html>
