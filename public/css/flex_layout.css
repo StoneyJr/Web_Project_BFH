@@ -43,11 +43,21 @@ header .empty_right{
 nav{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    width: 100%;
+
+}
+
+nav.navOpen {
+    left: 0;
 }
 
 nav a{
     margin: 10px;
+    display: block;
+    padding: 20px;
+    text-align: center;
+
 }
 
 /*Main layout*/
@@ -141,6 +151,12 @@ footer .row .footer3 {
     main .form .middleInput, main .form .longInput{
         flex: 100%;
     }
+    nav a {
+        display: block;
+    }
+    .hamburger {
+        display: none;
+    }
 
 }
 
@@ -169,5 +185,11 @@ footer .row .footer3 {
     main .form{
         order: 3;
         flex: 100%;
+    }
+    nav a {
+        display: block;
+    }
+    .hamburger {
+        display: none;
     }
 }

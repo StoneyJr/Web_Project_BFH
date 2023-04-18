@@ -6,53 +6,84 @@
     <title>EiraSana - Kontakt</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="/css/flex_layout.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
 <body>
-    <header>
-        <a href="index.html"> 
-            <img class="logo" src="pictures/logo_small.png" alt="Logo" height=100px>
-        </a>
-        <div class="title">Kontakt</div>
-        <div class="empty_right"></div>
-    </header>
+<header>
+    <a href="index.html">
+        <img class="logo" src="pictures/logo_small.png" alt="Logo" height=100px>
+    </a>
+    <div class="title">Kontakt</div>
+    <div class="empty_right"></div>
 
-    <nav>
-        <a href="osteopathy.html"> Osteopathie</a>
-        <a href="treatments.html"> Angebot</a>
-        <a href="about.html"> &Uumlber mich</a>
-        <a href="contact.html"> Kontakt</a>
-    </nav>
+</header>
 
-    <main>
-        <div class="mainHeader">
-                {formHeader}
-        </div>
-        <div class="form">
-            {sentForm}
-        </div>
-    </main>
+<nav>
+    <a href="osteopathy.html"> Osteopathie</a>
+    <a href="treatments.html"> Angebot</a>
+    <a href="about.html"> &Uumlber mich</a>
+    <a href="contact.html"> Kontakt</a>
+    <div class="hamburger">
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </div>
 
-    <footer>
-        <div class="row">
-            <div class="footer1">
-                EiraSana <br>
-                Praxis f&uumlr Komplement&aumlrmedizin <br>
-                Musterastrasse 12 <br>
-                Musterdorf, Schweiz
-            </div>
-    
-            <div class="footer2">
-                Tel: +41 79 000 00 00 <br>
-                praxis@eirasana.ch <br>
-                www.eirasana.ch
-            </div>
-            <div class="footer3">
-                © Eirasana 2023<br>
-                Impressum <br>
-                Datenschutz
-            </div>
+
+</nav>
+
+
+<main>
+    <div class="mainHeader">
+        {formHeader}
+    </div>
+    <div class="form">
+        {sentForm}
+    </div>
+</main>
+
+<footer>
+    <div class="row">
+        <div class="footer1">
+            EiraSana <br>
+            Praxis f&uumlr Komplement&aumlrmedizin <br>
+            Musterastrasse 12 <br>
+            Musterdorf, Schweiz
         </div>
-    </footer> 
+
+        <div class="footer2">
+            Tel: +41 79 000 00 00 <br>
+            praxis@eirasana.ch <br>
+            www.eirasana.ch
+        </div>
+        <div class="footer3">
+            © Eirasana 2023<br>
+            Impressum <br>
+            Datenschutz
+        </div>
+    </div>
+</footer>
+
+<script>
+    const menuIcon = document.querySelector('.menuIcon');
+    const closeIcon = document.querySelector('.closeIcon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+        nav.classList.add('navOpen');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+    });
+
+    closeIcon.addEventListener('click', () => {
+        nav.classList.remove('navOpen');
+        closeIcon.style.display = 'none';
+        menuIcon.style.display = 'block';
+    });
+
+
+</script>
+
 </body>
 </html>
