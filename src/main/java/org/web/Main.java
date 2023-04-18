@@ -23,6 +23,4 @@ public class Main {
         server.start();
         System.out.println("Server ready on port " + SERVER_PORT);
     }
-
-
 }

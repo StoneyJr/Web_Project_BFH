@@ -65,5 +65,17 @@
         </div>
     </div>
 </footer>
+<script>
+    const enterButton = document.querySelector('#submitButton')
+    enterButton.addEventListener('click', function(e){
+        e.preventDefault()
+        const filter = document.querySelector('#searchBox')
+        const value = filter.value
+        const link = document.querySelector('a[href="costs"]')
+        link.href ='costs?filter=' + value
+        link.click()
+    })
+    console.log('new filter set')
+</script>
 </body>
 </html>

@@ -21,10 +21,8 @@ public class CostHandler implements HttpHandler {
         String filter = params.get("filter"); //url looks like costs?filter=...
         StringBuilder doc = new StringBuilder();
 
-
-        //TODO for javaScript
-        //doc.append("<input type=\"text\" value=\"Suche\" id=\"nameBox\">");
-        //doc.append("<input type=\"button\" value=\"Go!\" id=\"submit\" onClick=\"setFilter()\"");
+        doc.append("<input class=\"shortInput\" placeholder=\"Suche\" id=\"searchBox\">");
+        doc.append("<input type=\"button\" value=\"Go!\" id=\"submitButton\"");
 
         doc.append("<p>Die Therapiekosten liegen je nach Praxis zwischen CHF 140.- und CHF 160.- pro Stunde. 70% bis 90% der Kosten werden in der Regel von der Zusatzversicherung übernommen.");
         doc.append("Vor Therapiebeginn empfiehlt sich aber immer die Leistungs-Abklärung bei der Krankenkasse. Die Tabelle ist eine Orientierungshilfe ohne Gewähr.</p>");
