@@ -195,6 +195,11 @@ main .sideBar .button:hover {
 
 }
 
+#meme-image {
+    max-width: 220px;
+    height: auto;
+}
+
 /*Footer*/
 footer {
     background-color: white;

@@ -28,6 +28,12 @@
     <div class="sideBar" id="pictureMonika">
         <img class="pictureAbout" src="pictures/Monika.jpg" alt="Porträt"> <br>
         <span class="quote">„Leben ist Bewegung - sie sollte frei und ungehindert möglich sein.“ </span> <br>
+        <h1>Mein Lieblings Meme des Moments.</h1>
+        <a href="#" onclick="reloadMeme()">
+            <img id ="meme-image" src="" >
+            <p class="memeinfo quote">Klick mich</p>
+        </a>
+        
     </div>
 
     <div class="column">
@@ -81,6 +87,30 @@
         </div>
     </div>
 </footer>
+<script>
+
+    function reloadMeme(){
+        let info = document.querySelector('.memeinfo')
+        let image = document.querySelector('#meme-image')
+        info.innerHTML = "Lade..."
+        image.src = ""
+
+        fetch('https://meme-api.com/gimme')
+            .then(response => response.json())
+            .then(meme => {
+                if (!meme.nsfw){
+                    info.innerHTML = meme.title
+                    image.src = meme.url
+                }
+                else{
+                    info.innerHTML = "*kein geeignetes Meme gefunden"
+                }
+            })
+            .catch(error => {
+                info.innerHTML = "*Fehler beim Laden"
+            })
+    }
+</script>
 </body>
 
 </html>
