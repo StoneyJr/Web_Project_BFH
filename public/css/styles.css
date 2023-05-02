@@ -79,6 +79,8 @@ nav a:hover {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    background: black;
+    color: red;
 }
 .menuIcon,
 .closeIcon {

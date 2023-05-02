@@ -30,6 +30,11 @@
             <p>
                 Treten Sie mit uns in Kontakt    
             </p>
+            <h3>Der Spruch des Tages</h3>
+            <a href="#" onclick="reloadQuote()">
+                <p class="spruch">„Die Natur ist die beste Apotheke.“ </p>
+                <p class="author"> - Sebastian Kneipp </p>
+            </a>
         </div>
        <form class="form" action="process_contact" method="post">
             <select class="shortInput" name="anrede">
@@ -66,6 +71,24 @@
                 Datenschutz
             </div>
         </div>
-    </footer> 
+    </footer>
+<script>
+    function reloadQuote(){
+        let info = document.querySelector('.spruch')
+        let author = document.querySelector('.author')
+        info.innerHTML = "Lade..."
+        author.innerHTML = " "
+
+        fetch('https://api.goprogram.ai/inspiration')
+            .then(response => response.json())
+            .then(quote => {
+                    info.innerHTML = quote.quote
+                    author.innerHTML = quote.author
+            })
+            .catch(error => {
+                info.innerHTML = "*Fehler beim Laden"
+            })
+    }
+</script>
 </body>
 </html>
