@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Übungstagebuch</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+  <div id="app">
+    <header>
+        <h1>&Uumlbungstagebuch</h1>
+        <a href="/"> Zur&uumlck zur Website</a>
+    </header>
+    
+    <main>
+        <form class="form" @submit.prevent="addExercise">
+            <label for="exerciseName">&Uumlbung:</label>
+            <input class="middleInput" type="text" v-model="newExerciseName" required>
+            <button type="submit">Hinzuf&uumlgen</button>
+        </form>
+        <ul>
+            <li v-for="(exercise, index) in exercises" :key="index">
+              {{ exercise.name }}
+              <button @click="removeExercise(index)">L&oumlschen</button>
+            </li>
+        </ul>
+    </main>
+    
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    const app = Vue.createApp({
+        data: function() { 
+            return {
+                exercises: [],
+                newExerciseName: ''
+            }
+        },
+        methods: {
+            addExercise: function() {
+                if (this.newExerciseName.trim() !== '') {
+                    this.exercises.push({ name: this.newExerciseName });
+                    this.newExerciseName = '';
+                }
+            },
+            removeExercise: function(index) {
+                this.exercises.splice(index, 1);
+            }
+        }
+    });
+    app.mount('#app')
+  </script>
+</body>
+</html>
