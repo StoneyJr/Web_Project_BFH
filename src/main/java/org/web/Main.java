@@ -4,11 +4,7 @@ import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;
 
-import org.web.handler.ContactFormHandler;
-import org.web.handler.CostHandler;
-import org.web.handler.ProductsHandler;
-import org.web.handler.StaticContentHandler;
-import org.web.handler.ExercisesHandler;
+import org.web.handler.*;
 
 public class Main {
 
@@ -22,6 +18,7 @@ public class Main {
         server.createContext("/costs", new CostHandler());
         server.createContext("/", new StaticContentHandler());
         server.createContext("/exercises", new ExercisesHandler());
+        server.createContext("/calculator", new CalculatorHandler());
         server.start();
         System.out.println("Server ready on port " + SERVER_PORT);
     }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rechner</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+<div id="cal">
+    <header>
+        <h1>mein Rechner</h1>
+        <a href="/"> Zur&uumlck zur Website</a>
+    </header>
+
+    <main>
+        <div class="calculator">
+            <div class="display">{{current || '0'}}</div>
+            <div @click="clear" class="calbutton">C</div>
+            <div class="calbutton">+/-</div>
+            <div class="calbutton">%</div>
+            <div @click="divide" class="calbutton">/</div>
+            <div @click="append('7')" class="calbutton">7</div>
+            <div @click="append('8')" class="calbutton">8</div>
+            <div @click="append('9')" class="calbutton">9</div>
+            <div @click="times" class="calbutton">*</div>
+            <div @click="append('4')" class="calbutton">4</div>
+            <div @click="append('5')" class="calbutton">5</div>
+            <div @click="append('6')" class="calbutton">6</div>
+            <div class="calbutton">-</div>
+            <div @click="append('1')" class="calbutton">1</div>
+            <div @click="append('2')" class="calbutton">2</div>
+            <div @click="append('3')" class="calbutton">3</div>
+            <div @click="addd" class="calbutton">+</div>
+            <div @click="append('0')" class="calbutton">0</div>
+            <div @click="clear" class="calbutton">C</div>
+            <div @click="dot" class="calbutton">.</div>
+            <div @click="equal" class="calbutton">=</div>
+        </div>
+    </main>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+
+    const app = Vue.createApp({
+
+        data: function() {
+            return {
+                current: 'hello',
+                previous: null,
+                operator: null,
+                operatorClicked: false,
+            }
+        },
+        methods: {
+            clear: function () {
+                this.current = '';
+            },
+            append: function (number) {
+                if (this.operatorClicked) {
+                    this.current = '';
+                    this.operatorClicked = false;
+                }
+                this.current = `${this.current}${number}`;
+            },
+            setPrevious: function () {
+                this.previous = this.current;
+                this.operatorClicked = true;
+            },
+            divide: function () {
+                this.operator = (a, b) => a / b;
+                this.setPrevious();
+            },
+            times: function () {
+                this.operator = (a, b) => a * b;
+                this.setPrevious();
+            },
+            minus: function () {
+                this.operator = (a, b) => a - b;
+                this.setPrevious();
+            },
+            addd: function () {
+                this.operator = (a, b) => a + b;
+                this.setPrevious();
+            },
+            equal: function () {
+                this.current = `${this.operator(
+                    parseFloat(this.current),
+                    parseFloat(this.previous)
+                )}`;
+                this.previous = null;
+            }
+        }
+
+    });
+    app.mount('#app')
+</script>
+</body>
+</html>

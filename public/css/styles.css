@@ -230,3 +230,23 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+.main .calculator{
+    margin: 0 auto;
+    width: 400px;
+    display: grid;
+    font-size: 50px;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(50px,auto);
+}
+.main.calculator.display{
+    grid-column: 1/5;
+    background-color: antiquewhite;
+    color: aquamarine;
+
+}
+
+.main.calculator.calbutton{
+    background-color: aqua;
+    border: 1px solid black;
+}
