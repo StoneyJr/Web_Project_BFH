@@ -10,3 +10,8 @@ Beispiel ein Terminkalender, Kontaktformular etc.
 
 ## Referenz als Inspiration:
 [Osana Praxis Website](https://www.osana.ch/osteopathische-behandlungsformen "Osana Praxis Website")
+
+# Reflexion:
+Auf Basis unserer jetzigen Kenntnisse würden wir eine andere Vorgehensweise anwenden.
+Wir würden mehr auf Vue setzen, und wenn möglich eine Single-Page Applikation als Grundstruktur verwenden.
+So würde das kleine geordnete Chaos von statischen HTML, Java-Handler, Html mit Vue-Apps, etc. bereinigt werden.
