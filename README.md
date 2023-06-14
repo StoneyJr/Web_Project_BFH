@@ -13,5 +13,14 @@ Beispiel ein Terminkalender, Kontaktformular etc.
 
 # Reflexion:
 Auf Basis unserer jetzigen Kenntnisse würden wir eine andere Vorgehensweise anwenden.
-Wir würden mehr auf Vue setzen, und wenn möglich eine Single-Page Applikation als Grundstruktur verwenden.
-So würde das kleine geordnete Chaos von statischen HTML, Java-Handler, Html mit Vue-Apps, etc. bereinigt werden.
+Wir  haben erkannt, dass Vue.js viele Vorteile bietet und daher würden wir mehr auf Vue setzen. 
+Wenn möglich eine Single-Page Applikation als Grundstruktur verwenden, um das kleine geordnete Chaos
+von statischen HTML, Java-Handler, Html mit Vue-Apps, etc. zu bereinigen.
+
+Ein weiterer Punkt, den wir verbessert könnten, betrifft die externen Datenabfrage in unserem Projekt. 
+Aktuell besteht die Gefahr, dass sich diese Information verändert, ohne dass wir davon Kenntnis haben. 
+Um diesem Problem entgegenzuwirken könnte man noch einen Output generieren lassen, der den Request überprüft. 
+
+Abschliessend lässt sich sagen, dass dieses Projekt eine sehr lehrreiche Erfahrung war und unsere Kenntnisse sher erweitert haben. 
+Auch hat dieses Projekt unsere Teamarbeit gestärkt und uns die Möglichkeit gegeben unsere Teamarbeit
+effektiver zu gestalten und zu verbessern. 
